@@ -4,15 +4,22 @@
   <meta charset="utf-8">
   
   
-  <title>Skycry&#39;s Blog</title>
+  <title>use git | Skycry&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Skycry&#39;s Blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="一、 概述1.1 实际场景  备份 代码还原 协同开发 追溯   1.2 版本控制器的方式  SVN：集中式版本控制工具 GIT：分布是版本控制工具   1.3 工作流程图  命令：  clone：从远程仓库中克隆代码到本地仓库 checkout：从本地仓库中检出一个仓库分支然后进行修订 add：在提交前将代码提交到暂存区 commit：提交到本地仓库，本地仓库中保存修改的各个历史版本 fetch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="use git">
+<meta property="og:url" content="http://example.com/2023/05/31/usegit/index.html">
 <meta property="og:site_name" content="Skycry&#39;s Blog">
+<meta property="og:description" content="一、 概述1.1 实际场景  备份 代码还原 协同开发 追溯   1.2 版本控制器的方式  SVN：集中式版本控制工具 GIT：分布是版本控制工具   1.3 工作流程图  命令：  clone：从远程仓库中克隆代码到本地仓库 checkout：从本地仓库中检出一个仓库分支然后进行修订 add：在提交前将代码提交到暂存区 commit：提交到本地仓库，本地仓库中保存修改的各个历史版本 fetch">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/usegit.assets/image-20230531212836485-16855397189151.png">
+<meta property="og:image" content="http://example.com/usegit.assets/image-20230531214805994-16855408882482.png">
+<meta property="article:published_time" content="2023-05-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-31T15:20:40.674Z">
 <meta property="article:author" content="skycry">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/usegit.assets/image-20230531212836485-16855397189151.png">
   
     <link rel="alternate" href="/atom.xml" title="Skycry's Blog" type="application/atom+xml">
   
@@ -71,9 +78,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-usegit" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-usegit" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/31/usegit/" class="article-date">
   <time class="dt-published" datetime="2023-05-30T16:00:00.000Z" itemprop="datePublished">2023-05-31</time>
@@ -86,8 +91,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/31/usegit/">use git</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      use git
     </h1>
   
 
@@ -262,226 +267,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-gitlab_jenkins" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/27/gitlab_jenkins/" class="article-date">
-  <time class="dt-published" datetime="2023-05-26T16:00:00.000Z" itemprop="datePublished">2023-05-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/27/gitlab_jenkins/">gitlab_jenkins</a>
-    </h1>
+    <a href="/2023/05/27/gitlab_jenkins/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">gitlab_jenkins</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="1-前置任务"><a href="#1-前置任务" class="headerlink" title="1.前置任务"></a>1.前置任务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装所需要的依赖</span></span><br><span class="line">yum install make gcc wget net-tools  git vim  policycoreutils openssh-server openssh-clients postfix policycoreutils-python -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭防火墙</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭selinux</span></span><br><span class="line">vim /etc/selinux/config</span><br><span class="line"><span class="comment"># 将enforcing改成disabled</span></span><br><span class="line">SELINUX=disabled</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改主机名</span></span><br><span class="line">hostnamectl set-hostname gitlab_jenkins</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启生效</span></span><br><span class="line">reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载所需要的软件包,从清华源上下载</span></span><br><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/war-stable/2.346.3/jenkins.war --no-check-certificate</span><br><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-13.2.0-ce.0.el7.x86_64.rpm --no-check-certificate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找Java11包</span></span><br><span class="line">yum list | grep java-11</span><br><span class="line">java-11-openjdk.x86_64                      1:11.0.19.0.7-1.el7_9      @updates </span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装Java11</span></span><br><span class="line">yum install java-11-openjdk.x86_64  -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试java环境</span></span><br><span class="line">java -version</span><br><span class="line">openjdk version <span class="string">&quot;11.0.19&quot;</span> 2023-04-18 LTS</span><br><span class="line">OpenJDK Runtime Environment (Red_Hat-11.0.19.0.7-1.el7_9) (build 11.0.19+7-LTS)</span><br><span class="line">OpenJDK 64-Bit Server VM (Red_Hat-11.0.19.0.7-1.el7_9) (build 11.0.19+7-LTS, mixed mode, sharing)</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-安装gitlab"><a href="#2-安装gitlab" class="headerlink" title="2. 安装gitlab"></a>2. 安装gitlab</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">rpm -ivh gitlab-ce-13.2.0-ce.0.el7.x86_64.rpm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改访问的gitlab_web地址,将地址改为自己服务器的IP</span></span><br><span class="line">vim /etc/gitlab/gitlab.rb</span><br><span class="line">external_url <span class="string">&#x27;http://192.168.0.128&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新配置并且启动gilab</span></span><br><span class="line">gitlab-ctl reconfigure</span><br><span class="line"><span class="comment"># 时间比较久，可以抽根烟</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看gitlab状态</span></span><br><span class="line">gitlab-ctl status</span><br><span class="line"><span class="comment"># 全部是run代表成功</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在浏览器中访问此服务器</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-安装Jenkins"><a href="#3-安装Jenkins" class="headerlink" title="3.安装Jenkins"></a>3.安装Jenkins</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用Java -jar 启动在本地的8081端口</span></span><br><span class="line">java -jar jenkins.war --httpPort=8081</span><br><span class="line"></span><br><span class="line"><span class="comment"># 会有一个默认密码，复制出来</span></span><br><span class="line">*************************************************************</span><br><span class="line">*************************************************************</span><br><span class="line">*************************************************************</span><br><span class="line"></span><br><span class="line">Jenkins initial setup is required. An admin user has been created and a password generated.</span><br><span class="line">Please use the following password to proceed to installation:</span><br><span class="line"></span><br><span class="line">24d21eb009324c029f7fd2ede2019128</span><br><span class="line"></span><br><span class="line">This may also be found at: /root/.jenkins/secrets/initialAdminPassword</span><br><span class="line"></span><br><span class="line">*************************************************************</span><br><span class="line">*************************************************************</span><br><span class="line">*************************************************************</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在浏览器中访问 ip:8080</span></span><br><span class="line"><span class="comment"># 输入复制的密码</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击安装推荐的插件，过程漫长，可以抽烟。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/27/gitlab_jenkins/" data-id="cliaf6u2y0000fcuncons0p97" data-title="gitlab_jenkins" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-Markdown" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/20/Markdown/" class="article-date">
-  <time class="dt-published" datetime="2023-05-19T16:00:00.000Z" itemprop="datePublished">2023-05-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/20/Markdown/">use markdown</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用：# +空格代表标题，一级标题用一个#，二级用##，以此类推</p>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>斜体：使用一组* 包含需要斜体的内容</p>
-<p>举例：<em>这是斜体内容</em></p>
-<p>粗体：使用两组** 包含需要粗体的内容</p>
-<p>举例：<strong>这是粗体内容</strong></p>
-<p>粗斜体：使用三组*** 包含需要粗斜体的内容</p>
-<p>举例：<em><strong>这是粗斜体内容</strong></em></p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>使用：在一行的开头使用三个***+回车建立分割线</p>
-<p>举例：</p>
-<hr>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>使用：在文字的两端加上两个~~（波浪线）</p>
-<p>举例：<del>这是要添加删除线的内容</del></p>
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>使用：HTML的<U></u>来实现</p>
-<p>举例：<u>只是带下划线的内容</u></p>
-<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>使用：在文字的后面使用<a href="%E8%BF%99%E6%98%AF%E8%84%9A%E6%B3%A8%E7%9A%84%E5%86%85%E5%AE%B9">^</a>添加需要的脚注，类似于解释</p>
-<p>举例：这是需要添加脚注的文本<a href="%E8%BF%99%E6%98%AF%E8%84%9A%E6%B3%A8%E7%9A%84%E5%86%85%E5%AE%B9">^脚注</a>。</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>无序列表：使用”+、-、*”的其中一个+空格（需要回车）</p>
-<p>举例：</p>
-<ul>
-<li>第一项</li>
-</ul>
-<p>有序列表：使用数字+.（需要回车）</p>
-<p>举例：</p>
-<p>1.第一项</p>
-<p>列表嵌套：使用有序列表和无序列表进行组合（需要回车），组合的时候需要添加tab或者四个空格</p>
-<p>举例：</p>
-<p>1.第一项</p>
-<ul>
-<li>第一项里面的小项</li>
-</ul>
-<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><p>使用：在开头使用&gt;，表示使用这个区域，使用完需要回车，反过来可以列表嵌套区块</p>
-<p>举例：</p>
-<blockquote>
-<p>这是一个区块</p>
-<p> 1.这是区块的有序列表</p>
-<pre><code>    - 这是区块里面有序列表嵌套的无序列表
-</code></pre>
-</blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>使用：英文输入法下的一组反引号&#96;,就是代码块</p>
-<p>举例：<code>print(&quot;hello world!&quot;)</code></p>
-<h2 id="包裹代码"><a href="#包裹代码" class="headerlink" title="包裹代码"></a>包裹代码</h2><p>使用：在开头使用三个&#96;&#96;&#96;，就会提示你要插入的代码</p>
-<p>举例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">hostname = socket.gethostname()</span><br><span class="line">ip = socket.gethostbyname(hostname)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hostname=&quot;</span>,hostname)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;ip=&quot;</span>,ip)</span><br></pre></td></tr></table></figure>
-
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>使用：使用中括号包含需要的链接名称[链接名称]，然后在后面用小括号输入链接地址(链接地址)</p>
-<p>举例：这是MySQL的下载地址：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/mysql/downloads/MySQL-5.7/mysql-5.7.36-winx64.msi">MySQL5.7</a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>使用：直接复制粘贴就行</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>使用：制作表格用|来分隔不同的单元格，使用-来分隔表头和其他行</p>
-<p>举例：</p>
-<table>
-<thead>
-<tr>
-<th align="center">列1</th>
-<th align="center">列2</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"></td>
-<td align="center"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center"></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="高级技巧"><a href="#高级技巧" class="headerlink" title="高级技巧"></a>高级技巧</h2><p>用不到，不写了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/20/Markdown/" data-id="cliag07l200003kunc9u3alfn" data-title="use markdown" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Hexo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/06/Hexo/" class="article-date">
-  <time class="dt-published" datetime="2023-05-05T16:00:00.000Z" itemprop="datePublished">2023-05-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/06/Hexo/">Hexo create blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载nodejs</span></span><br><span class="line">wget https://mirrors.ustc.edu.cn/node/v16.8.0/node-v16.8.0-linux-x64.tar.gz</span><br><span class="line"><span class="comment"># 解压并且重命名</span></span><br><span class="line">tar zxvf node-v16.8.0-linux-x64.tar.gz</span><br><span class="line"><span class="built_in">mv</span> node-v16.8.0-linux-x64 node16</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改环境变量</span></span><br><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 插入以下内容</span></span><br><span class="line"><span class="built_in">export</span> PATH=/root/node16/bin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生效环境变量</span></span><br><span class="line">souce /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置npm为淘宝源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装git</span></span><br><span class="line">yum install git -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置全局git配置</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span>  	<span class="comment"># 邮件地址自己修改</span></span><br><span class="line">git config --global user.name <span class="string">&quot;your example name&quot;</span>			<span class="comment"># 名字自己改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成试试秘钥</span></span><br><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span>   	<span class="comment"># 邮件地址自己修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看秘钥并且复制</span></span><br><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>GitHub使用步骤：</p>
-<ul>
-<li>注册Git Hub账号</li>
-<li>在主页上新建你的仓库：以 <code>github.io</code>结尾</li>
-<li>点击头像——&gt; settings ——-&gt; SSH and GPG kyes ——&gt; New Ssh key —-&gt; 粘贴你复制的秘钥</li>
-<li>点击repository：把最上面的<code>main</code>修改为<code>master</code></li>
-<li>复制你的仓库地址建议使用<code>ssh</code>，因为你上面添加了公钥</li>
-</ul>
-</blockquote>
-<h2 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局安装hexo</span></span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化博客项目，并且把名字设置为blog</span></span><br><span class="line">hexo init blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入到blog</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖包</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装hexo-deployer-git包</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、-配置部署"><a href="#三、-配置部署" class="headerlink" title="三、 配置部署"></a>三、 配置部署</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改配置文件</span></span><br><span class="line">vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在最后面修改</span></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:&lt;your-username&gt;/&lt;your-username&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、发布博客"><a href="#四、发布博客" class="headerlink" title="四、发布博客"></a>四、发布博客</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入到文章目录</span></span><br><span class="line"><span class="built_in">cd</span> <span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建文章</span></span><br><span class="line">hexo new <span class="string">&quot;filename&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在本地预览</span></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发布到GitHub</span></span><br><span class="line">hexo d</span><br><span class="line"><span class="comment"># 自己写的笔记发送到hexo</span></span><br><span class="line"><span class="comment"># 需要在文档开头填写: --- title:name  date: YY-MM-DD HH:MM:SS  --- </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在浏览器中访问博客地址：</p>
-<p><strong><code>https://&lt;your-githubname&gt;.github.io/</code></strong>   </p>
-<p>完成！</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/06/Hexo/" data-id="cliaf1m0b00005gunhns18bep" data-title="Hexo create blog" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
