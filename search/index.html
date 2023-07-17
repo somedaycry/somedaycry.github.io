@@ -41,8 +41,8 @@
     
     
     <title>
-          
-            Skycry&#39;s Blog
+        
+            Search | Skycry&#39;s Blog
         
     </title>
     
@@ -204,62 +204,18 @@
   </v-col>
 </v-row>
 
-                            
-<v-card class="elevation-2 index-card">
-    <v-timeline class="timeline" dense>
+                            <v-card class="elevation-2 post-card">
+    <div class="post-header">
+        <a class="post-header-title font-weight-medium" href="/somedaycry/search/index.html">搜索</a>
+    </div>
+    <div class="post-content typo">
         
-            
-            
-                <v-timeline-item class="timeline-header" color="secondary lighten-2">
-                    <a href="/somedaycry/archives/2023" class="timeline-title">2023</a>
-                    <span class="timeline-subtitle">归档</span>
-                </v-timeline-item>
-                
-            
-            <v-timeline-item fill-dot small color="secondary lighten-2">
-                <div class="timeline-item-post d-none d-md-block">
-                    <span class="timeline-item-time">2023.05.27</span>
-                    <a href="/somedaycry/2023/05/27/gitlab_jenkins/" class="timeline-item-title">gitlab_jenkins</a>
-                </div>
-                <div class="timeline-item-post-mobile d-block d-md-none">
-                    <span class="timeline-item-time">2023.05.27</span><br>
-                    <a href="/somedaycry/2023/05/27/gitlab_jenkins/" class="timeline-item-title">gitlab_jenkins</a>
-                </div>
-                <v-divider></v-divider>
-            </v-timeline-item>
+            <v-text-field label="Search" v-model="searchPageValue" prepend-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchPageValue,true)"></v-text-field>
+            <v-card class="elevation-0" id="search-result"></v-card>
         
-            
-            
-            <v-timeline-item fill-dot small color="secondary lighten-2">
-                <div class="timeline-item-post d-none d-md-block">
-                    <span class="timeline-item-time">2023.05.20</span>
-                    <a href="/somedaycry/2023/05/20/Markdown/" class="timeline-item-title">use markdown</a>
-                </div>
-                <div class="timeline-item-post-mobile d-block d-md-none">
-                    <span class="timeline-item-time">2023.05.20</span><br>
-                    <a href="/somedaycry/2023/05/20/Markdown/" class="timeline-item-title">use markdown</a>
-                </div>
-                <v-divider></v-divider>
-            </v-timeline-item>
-        
-            
-            
-            <v-timeline-item fill-dot small color="secondary lighten-2">
-                <div class="timeline-item-post d-none d-md-block">
-                    <span class="timeline-item-time">2023.05.06</span>
-                    <a href="/somedaycry/2023/05/06/Hexo/" class="timeline-item-title">Hexo create blog</a>
-                </div>
-                <div class="timeline-item-post-mobile d-block d-md-none">
-                    <span class="timeline-item-time">2023.05.06</span><br>
-                    <a href="/somedaycry/2023/05/06/Hexo/" class="timeline-item-title">Hexo create blog</a>
-                </div>
-                <v-divider></v-divider>
-            </v-timeline-item>
-        
-    </v-timeline>
+    </div>
 </v-card>
-
-         
+        
                             <div id="mobile-footer" class="d-block d-md-none">
                                 <v-divider></v-divider>
                                 <div id="mobile-footer-content">

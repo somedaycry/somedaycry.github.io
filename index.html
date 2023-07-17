@@ -1,579 +1,447 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Skycry&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Skycry&#39;s Blog">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Skycry&#39;s Blog">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="skycry">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Skycry's Blog" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
+    <meta name="referrer" content="no-referrer-when-downgrade">
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="shortcut icon" href="themes\insulin\images\favicon.ico">
+    
+     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.2.30/dist/vuetify.min.css" rel="stylesheet">
+    
+<link rel="stylesheet" href="/somedaycry/css/main.css">
 
-  
-  
+    
+    
+
+
+
+
+
+
+
+    
+    
+    
+        <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        
+            load: ['[tex]/mhchem'],
+        
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        
+            packages: {'[+]': ['mhchem']},
+        
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+          
+
+    
+    
+    
+    
+    <title>
+          
+            Skycry&#39;s Blog
+        
+    </title>
+    
+    
 <meta name="generator" content="Hexo 6.3.0"></head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Skycry&#39;s Blog</a>
-      </h1>
-      
+    <div id="app">
+        <v-app>
+            <v-content id="page">
+                <v-container fluid>
+                    <v-row>
+                        <v-col cols="2" class="d-none d-md-block">
+                            <div id="sidebar" class="float-right">
+    <a href="/somedaycry/" rel="home">
+        <v-avatar size=96>
+            <img id="logo" src="themes\insulin\images\avatar.webp">     
+        </v-avatar> 
+    </a>
+    <v-divider></v-divider>
+    <div class="mini-menu">
+        <v-btn icon href="/somedaycry/">
+            <v-icon>home</v-icon>
+        </v-btn>
+        <v-btn icon href="/somedaycry/categories/">
+            <v-icon>folder</v-icon>
+        </v-btn>
+        <v-btn icon href="/somedaycry/tags/">
+            <v-icon>bookmark</v-icon>
+        </v-btn>
+        <v-btn icon @click="SetNightMode">
+            <v-icon>{{ nightMode }}</v-icon>
+        </v-btn>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+    <v-list id="main-menu" class="font-weight-bold" flat>
         
-          <a class="main-nav-link" href="/">Home</a>
+            
+            <v-list-item href="/somedaycry/archives/" link>
+            <v-list-item-icon><v-icon>archive</v-icon></v-list-item-icon>
+            <v-list-item-content>
+                归档
+            </v-list-item-content>
+            </v-list-item>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+            
+            <v-list-item href="/somedaycry/categories/" link>
+            <v-list-item-icon><v-icon>fas fa-folder-open</v-icon></v-list-item-icon>
+            <v-list-item-content>
+                分类
+            </v-list-item-content>
+            </v-list-item>
         
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+    </v-list>
+    <v-divider></v-divider>
+    
+        <v-list id="sub-menu" class="font-weight-medium" dense>
+            
+                
+                    <v-list-item href="/somedaycry/categories/Linux/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="1" >
+                            <v-hover v-model="menuHover">
+                                <v-list-item-content>
+                                    <span>Linux</span>                              
+                                </v-list-item-content>                           
+                            </v-hover>
+                        </v-badge>
+                    </v-list-item>
+                
+            
+                
+                    <v-list-item href="/somedaycry/categories/Default/" link>
+                        <v-badge :value="menuHover" transition="slide-y-transition" inline content="2" >
+                            <v-hover v-model="menuHover">
+                                <v-list-item-content>
+                                    <span>Default</span>                              
+                                </v-list-item-content>                           
+                            </v-hover>
+                        </v-badge>
+                    </v-list-item>
+                
+            
+        </v-list>    
+    
+
+    <div id="footer">
+        <div class="footer-social">
+            
+                
+                <v-btn icon href="mailto:1658745613@qq.com" target="_blank">
+                    <v-icon>fas fa-envelope</v-icon>
+                </v-btn>
+            
+                
+                <v-btn icon href="https://github.com/somedaycry" target="_blank">
+                    <v-icon>fab fa-github</v-icon>
+                </v-btn>
+            
+        </div>
+        <v-divider></v-divider>
+        <div class="footer-content">
+            
+                <span id="busuanzi_container_site_uv" style="display: none;"> 
+                    总访客量 <span id="busuanzi_value_site_uv"></span>
+                </span>
+                <br>
+            
+            <span>Theme: <a href="https://github.com/kb1000fx/hexo-theme-insulin">Insulin</a></span><br>
+            <span>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></span><br>
+            <span>
+                &copy; 2015 - 2023 
+                skycry
+            </span>
+        </div>
+    </div>
+</div>
+
+                        </v-col>
+                        <v-col cols="12" md="10">
+                            <v-row>
+  <v-col cols="12" md="8" align-self="end">
+    <div id="site-header">
+      <div id="site-title">
+        <a href="/somedaycry/" rel="home">Skycry&#39;s Blog</a>
       </div>
+      <div id="site-description">哪有那么多开挂的人生,只是有人负重前行.</div>
+      <div id="mobile-menu" class="d-block d-md-none">
+        <v-text-field label="请输入关键字" data-src="search.xml" v-model="searchHeaderValue" prepend-inner-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchHeaderValue,false)"></v-text-field>
+        <div class="mobile-mini-menu">
+          <v-btn icon href="/">
+              <v-icon>home</v-icon>
+          </v-btn>
+          <v-btn icon href="/categories/">
+              <v-icon>folder</v-icon>
+          </v-btn>
+          <v-btn icon href="/tags/">
+              <v-icon>bookmark</v-icon>
+          </v-btn>
+          <v-btn icon @click="SetNightMode">
+              <v-icon>{{ nightMode }}</v-icon>
+          </v-btn>
+          
+            
+            <v-btn icon href="/somedaycry/archives/">
+              <v-icon>archive</v-icon>
+            </v-btn>
+          
+            
+            <v-btn icon href="/somedaycry/categories/">
+              <v-icon>fas fa-folder-open</v-icon>
+            </v-btn>
+          
+        </div>
+      </div>    
     </div>
-  </div>
-</header>
+  </v-col>  
+  <v-col cols="4" align-self="end" class="d-none d-md-block">
+    <v-col align-self="end">
+      <v-text-field label="请输入关键字" data-src="search.xml" v-model="searchHeaderValue" prepend-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchHeaderValue,false)"></v-text-field>
+    </v-col> 
+  </v-col>
+</v-row>
 
-      <div class="outer">
-        <section id="main">
+                            <v-card class="elevation-2 index-card">
   
-    <article id="post-usegit" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/31/usegit/" class="article-date">
-  <time class="dt-published" datetime="2023-05-30T16:00:00.000Z" itemprop="datePublished">2023-05-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <article class="index-article">
+      
+      <div class="index-article-header">
+        <v-row no-gutters>
+          <v-col cols="auto">
+            <div class="index-article-header-date font-weight-medium">
+              2023-05-27
+            </div>
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col cols="auto">
+            
+              <v-card flat color="secondary" tile class="index-article-header-tag  font-weight-medium">
+                
+                  <span class="index-article-header-tag-content">
+                    <v-icon>fas fa-tag</v-icon>
+                    <a rel="tag" href = /somedaycry/tags/note/ >note</a>
+                  </span>
+                
+              </v-card>
+            
+          </v-col>
+        </v-row>
+        <span>
+          
+            <a class="index-article-header-category font-weight-bold" href="/somedaycry/categories/Linux/">Linux></a>
+           
+        </span> 
+        <a class="index-article-header-title font-weight-medium" href="/somedaycry/2023/05/27/gitlab_jenkins/">gitlab_jenkins</a>
+      </div>
+      
+      <div class="index-article-content">
         
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/31/usegit/">use git</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="一、-概述"><a href="#一、-概述" class="headerlink" title="一、 概述"></a>一、 概述</h2><h3 id="1-1-实际场景"><a href="#1-1-实际场景" class="headerlink" title="1.1 实际场景"></a>1.1 实际场景</h3><blockquote>
-<ul>
-<li>备份</li>
-<li>代码还原</li>
-<li>协同开发</li>
-<li>追溯</li>
-</ul>
-</blockquote>
-<h3 id="1-2-版本控制器的方式"><a href="#1-2-版本控制器的方式" class="headerlink" title="1.2 版本控制器的方式"></a>1.2 版本控制器的方式</h3><blockquote>
-<ul>
-<li>SVN：集中式版本控制工具</li>
-<li>GIT：分布是版本控制工具</li>
-</ul>
-</blockquote>
-<h3 id="1-3-工作流程图"><a href="#1-3-工作流程图" class="headerlink" title="1.3 工作流程图"></a>1.3 工作流程图</h3><p><img src="/../usegit.assets/image-20230531212836485-16855397189151.png" alt="image-20230531212836485.png"></p>
-<blockquote>
-<p>命令：</p>
-<ul>
-<li>clone：从远程仓库中克隆代码到本地仓库</li>
-<li>checkout：从本地仓库中检出一个仓库分支然后进行修订</li>
-<li>add：在提交前将代码提交到暂存区</li>
-<li>commit：提交到本地仓库，本地仓库中保存修改的各个历史版本</li>
-<li>fetch：从远程库，抓取到本地仓库，不进行任何的合并动作，一般操作较少</li>
-<li>pull：才能够远程库拉取到本地库，自动进行合并，然后放到工作区</li>
-<li>push：修改完成后，将代码推送到远程仓库（gitlab）</li>
-</ul>
-</blockquote>
-<h3 id="1-4-下载与安装"><a href="#1-4-下载与安装" class="headerlink" title="1.4 下载与安装"></a>1.4 下载与安装</h3><blockquote>
-<p>Linux环境：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum install git -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看安装版本</span></span><br><span class="line">git --version</span><br><span class="line">git version 1.8.3.1</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Windows环境：</p>
-<p>由于国内网络环境问题，我们需要找到国内的镜像源，此处我使用淘宝源</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="https://registry.npmmirror.com/-/binary/git-for-windows/v2.34.0.windows.1/Git-2.34.0-64-bit.exe">点我下载</a>，安装就是无脑下一步即可。</p>
-<p>右键会有<code>git bash here</code>选项。</p>
-<h3 id="1-5-基本配置"><a href="#1-5-基本配置" class="headerlink" title="1.5 基本配置"></a>1.5 基本配置</h3><blockquote>
-<p>打开Git Bash</p>
-<p>设置用户名：</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name  <span class="string">&quot;you github name&quot;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>设置邮箱</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email  <span class="string">&quot;your github email&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="1-6-获取本地仓库"><a href="#1-6-获取本地仓库" class="headerlink" title="1.6 获取本地仓库"></a>1.6 获取本地仓库</h3><blockquote>
-<p>Windows操作</p>
-</blockquote>
-<ul>
-<li>在电脑任意位置创建空目录</li>
-<li>进入目录，打开git bash</li>
-<li>执行git init</li>
-<li>执行完成杭州本地的文件夹下有一个 <code>.git</code>文件</li>
-</ul>
-<blockquote>
-<p>Linux操作</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> gitlocal</span><br><span class="line"><span class="built_in">cd</span> gitlocal</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化</span></span><br><span class="line">git init</span><br><span class="line">初始化空的 Git 版本库于 /root/gitlocal/.git/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看隐藏文件 .git</span></span><br><span class="line"><span class="built_in">ls</span> -a</span><br><span class="line">.  ..  .git</span><br></pre></td></tr></table></figure>
-
-<h2 id="二、基础操作"><a href="#二、基础操作" class="headerlink" title="二、基础操作"></a>二、基础操作</h2><h3 id="2-1-介绍"><a href="#2-1-介绍" class="headerlink" title="2.1 介绍"></a>2.1 介绍</h3><blockquote>
-<p>git工作目录下对于文件的修改（增加、杀出、更新）会存在几个状态，这些修改的状态会随着我们执行git的命令而发生变化。</p>
-</blockquote>
-<p>图示：</p>
-<p><img src="/../usegit.assets/image-20230531214805994-16855408882482.png" alt="image-20230531214805994"></p>
-<ul>
-<li><p>git add：工作区  —&gt; 暂存区</p>
-</li>
-<li><p>git commit ：提交暂存区内容到本地仓库的当前分支</p>
-<ul>
-<li>命令形式：git commit -m “注释内容”</li>
-</ul>
-</li>
-<li><p>git status：查看修改的状态</p>
-</li>
-<li><p>git add：添加工作区一个或者多个文件的修改到暂存区</p>
-</li>
-<li><p>git reset –hard  commitID</p>
-<ul>
-<li>commitID可以使用<code>git log</code>查看</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-2-忽略列表"><a href="#2-2-忽略列表" class="headerlink" title="2.2 忽略列表"></a>2.2 忽略列表</h3><blockquote>
-<p>有一些文件无需固体管理，通常都是自动生成的日志文件、编译过程创建的临时文件。</p>
-<p>在工作目录中创建.gitignore。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim .gitignore</span><br><span class="line"><span class="comment"># 添加需要过滤的文件类型</span></span><br><span class="line">*.a</span><br><span class="line">!lib.a</span><br><span class="line"><span class="comment"># 保存</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-3-练习"><a href="#2-3-练习" class="headerlink" title="2.3 练习"></a>2.3 练习</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在本地文件夹创建文件</span></span><br><span class="line">[root@gitlab_jenkins gitlocal]<span class="comment"># touch  file01.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将文件加入暂存区</span></span><br><span class="line">[root@gitlab_jenkins gitlocal]<span class="comment"># git add .</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交到本地仓库，并且添加注释</span></span><br><span class="line">[root@gitlab_jenkins gitlocal]<span class="comment"># git commit -m &quot;commit 001&quot;</span></span><br><span class="line">[master（根提交） 51835a9] commit 001</span><br><span class="line"> 2 files changed, 3 insertions(+)</span><br><span class="line"> create mode 100644 .gitignore</span><br><span class="line"> create mode 100644 file01.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看日志</span></span><br><span class="line">[root@gitlab_jenkins gitlocal]<span class="comment"># git log</span></span><br><span class="line">commit 51835a9cf82b5ce5fca44ff43c023197bda444a5</span><br><span class="line">Author: somedaycry &lt;1658745613@qq.com&gt;</span><br><span class="line">Date:   Wed May 31 21:59:01 2023 +0800</span><br><span class="line"></span><br><span class="line">    commit 001</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改file01</span></span><br><span class="line">vim file01.txt</span><br><span class="line"><span class="comment"># 添加 任何 字符并且保存</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">git status</span><br><span class="line"><span class="comment"># 位于分支 master</span></span><br><span class="line"><span class="comment"># 尚未暂存以备提交的变更：</span></span><br><span class="line"><span class="comment">#   （使用 &quot;git add &lt;file&gt;...&quot; 更新要提交的内容）</span></span><br><span class="line"><span class="comment">#   （使用 &quot;git checkout -- &lt;file&gt;...&quot; 丢弃工作区的改动）</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#       修改：      file01.txt</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">修改尚未加入提交（使用 <span class="string">&quot;git add&quot;</span> 和/或 <span class="string">&quot;git commit -a&quot;</span>）</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加到暂存区</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">git status</span><br><span class="line"><span class="comment"># 位于分支 master</span></span><br><span class="line"><span class="comment"># 要提交的变更：</span></span><br><span class="line"><span class="comment">#   （使用 &quot;git reset HEAD &lt;file&gt;...&quot; 撤出暂存区）</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#       修改：      file01.txt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交到本地仓库，并且添加注释</span></span><br><span class="line">git commit -m <span class="string">&quot;update 001&quot;</span></span><br><span class="line">[master d389dee] update 001</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看日志</span></span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line">commit d389dee94476c858401c6ca7d0a255f8b8690313</span><br><span class="line">Author: your useinfo</span><br><span class="line">Date:   Wed May 31 22:04:20 2023 +0800</span><br><span class="line"></span><br><span class="line">    update 001</span><br><span class="line"></span><br><span class="line">commit 51835a9cf82b5ce5fca44ff43c023197bda444a5</span><br><span class="line">Author: your useinfo</span><br><span class="line">Date:   Wed May 31 21:59:01 2023 +0800</span><br><span class="line"></span><br><span class="line">    commit 001</span><br><span class="line">(END)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本回溯</span></span><br><span class="line">git reset d389dee94476c858401c6ca7d0a255f8b8690313 --hard</span><br></pre></td></tr></table></figure>
-
-<h3 id="三、分支"><a href="#三、分支" class="headerlink" title="三、分支"></a>三、分支</h3><h3 id="3-1-介绍"><a href="#3-1-介绍" class="headerlink" title="3.1 介绍"></a>3.1 介绍</h3><blockquote>
-<p>分支意味着你可以把你的工作从开发主线上分离开来进行重大的Bug修改、开发新的功能，以免影响开发主线。</p>
-</blockquote>
-<h3 id="3-2-基本命令"><a href="#3-2-基本命令" class="headerlink" title="3.2 基本命令"></a>3.2 基本命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看本地分支</span></span><br><span class="line">git branch</span><br><span class="line">* master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建本地分支</span></span><br><span class="line">git branch mybranch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换分支</span></span><br><span class="line">git checkout mybranch</span><br><span class="line">切换到分支 <span class="string">&#x27;mybranch&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到不存在的分支（创建并且切换）</span></span><br><span class="line">git checkout -b mybranch2</span><br><span class="line">切换到一个新分支 <span class="string">&#x27;mybranch2&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 合并分支，先在mybranch分支创建并且提交到本地仓库</span></span><br><span class="line">git checkout mybranch</span><br><span class="line"><span class="built_in">touch</span> file002.txt</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;mybranch commit&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换回master分支</span></span><br><span class="line">git checkout master</span><br><span class="line"><span class="comment"># 将mybranch分支合并到master分支</span></span><br><span class="line">git merge mybranch</span><br><span class="line">更新 d389dee..43ff370</span><br><span class="line">Fast-forward</span><br><span class="line"> file002.txt | 0</span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 file002.txt</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除分支，只能删除未在使用的分支</span></span><br><span class="line">git branch -d mybranch2</span><br><span class="line">已删除分支 mybranch2（曾为 d389dee）。</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-原则与流程"><a href="#3-3-原则与流程" class="headerlink" title="3.3 原则与流程"></a>3.3 原则与流程</h3><blockquote>
-<ul>
-<li>master分支：生产分支</li>
-<li>develop：开发分支</li>
-<li>…</li>
-</ul>
-</blockquote>
-<h2 id="三、git远程仓库"><a href="#三、git远程仓库" class="headerlink" title="三、git远程仓库"></a>三、git远程仓库</h2><h3 id="3-1-分类"><a href="#3-1-分类" class="headerlink" title="3.1 分类"></a>3.1 分类</h3><ul>
-<li><a href="https://github.com：环境问题访问比较慢">https://github.com：环境问题访问比较慢</a></li>
-<li><a href="https://gitee.com：服务器在国内访问比较快">https://gitee.com：服务器在国内访问比较快</a></li>
-<li><a href="https://about.gitlab.com：git私服，生产环境一般使用gitlab_jenkins配合">https://about.gitlab.com：git私服，生产环境一般使用gitlab_jenkins配合</a></li>
-</ul>
-<h3 id="3-2-操作远程仓库"><a href="#3-2-操作远程仓库" class="headerlink" title="3.2 操作远程仓库"></a>3.2 操作远程仓库</h3><blockquote>
-<p><strong><code>添加</code></strong></p>
-<p>命令：git remote add &lt;远端名称&gt;&lt;仓库路径&gt;</p>
-<ul>
-<li>远端名称：默认是 origin</li>
-<li>仓库路径，从远端服务器获取URL，例如：<a target="_blank" rel="noopener" href="https://github.com/somedaycry/git_test.git">https://github.com/somedaycry/git_test.git</a></li>
-</ul>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/somedaycry/git_test.git</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong><code>查看</code></strong></p>
-<p>命令：git remote</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote</span><br><span class="line">origin</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>**<code>推送</code>**到远程仓库</p>
-</blockquote>
-<blockquote>
-<p>命令：git push [-f] [-set-upstream][远端名称[本地分支名][:远端分支名]]</p>
-<ul>
-<li>如果远程分支名和本地分支名称相同，则可以直系本地分支</li>
-<li>如果报错建议使用SSH KEY连接</li>
-</ul>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br><span class="line">Enumerating objects: 3, <span class="keyword">done</span>.</span><br><span class="line">Counting objects: 100% (3/3), <span class="keyword">done</span>.</span><br><span class="line">Delta compression using up to 12 threads</span><br><span class="line">Compressing objects: 100% (2/2), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, <span class="keyword">done</span>.</span><br><span class="line">Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span><br><span class="line">To https://github.com/somedaycry/git_test.git</span><br><span class="line"> * [new branch]      master -&gt; master</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-克隆远程仓库"><a href="#3-3-克隆远程仓库" class="headerlink" title="3.3 克隆远程仓库"></a>3.3 克隆远程仓库</h3><blockquote>
-<p>命令：git clone &lt;仓库路径&gt;[本地目录]</p>
-<ul>
-<li>本地目录可以省略，自动生成本地目录</li>
-</ul>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/somedaycry/git_test.git</span><br><span class="line">正克隆到 <span class="string">&#x27;git_test&#x27;</span>...</span><br><span class="line">remote: Enumerating objects: 3, <span class="keyword">done</span>.</span><br><span class="line">remote: Counting objects: 100% (3/3), <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (2/2), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (3/3), <span class="keyword">done</span>.</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-4-拉取远程仓库"><a href="#3-4-拉取远程仓库" class="headerlink" title="3.4 拉取远程仓库"></a>3.4 拉取远程仓库</h3><blockquote>
-<p>命令：git pull [remote name] [branch name]</p>
-<ul>
-<li>拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge</li>
-<li>如果不指定远端名称和分支名，则抓取所有并更新当前分支。</li>
-</ul>
-</blockquote>
-<pre><code class="bas">git pull origin master
-</code></pre>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/31/usegit/" data-id="clibu06ch0000kkun9m70156s" data-title="use git" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-gitlab_jenkins" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/27/gitlab_jenkins/" class="article-date">
-  <time class="dt-published" datetime="2023-05-26T16:00:00.000Z" itemprop="datePublished">2023-05-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/27/gitlab_jenkins/">gitlab_jenkins</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="1-前置任务"><a href="#1-前置任务" class="headerlink" title="1.前置任务"></a>1.前置任务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装所需要的依赖</span></span><br><span class="line">yum install make gcc wget net-tools  git vim  policycoreutils openssh-server openssh-clients postfix policycoreutils-python -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭防火墙</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭selinux</span></span><br><span class="line">vim /etc/selinux/config</span><br><span class="line"><span class="comment"># 将enforcing改成disabled</span></span><br><span class="line">SELINUX=disabled</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改主机名</span></span><br><span class="line">hostnamectl set-hostname gitlab_jenkins</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启生效</span></span><br><span class="line">reboot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载所需要的软件包,从清华源上下载</span></span><br><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/war-stable/2.346.3/jenkins.war --no-check-certificate</span><br><span class="line">wget https://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7/gitlab-ce-13.2.0-ce.0.el7.x86_64.rpm --no-check-certificate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找Java11包</span></span><br><span class="line">yum list | grep java-11</span><br><span class="line">java-11-openjdk.x86_64                      1:11.0.19.0.7-1.el7_9      @updates </span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装Java11</span></span><br><span class="line">yum install java-11-openjdk.x86_64  -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试java环境</span></span><br><span class="line">java -version</span><br><span class="line">openjdk version <span class="string">&quot;11.0.19&quot;</span> 2023-04-18 LTS</span><br><span class="line">OpenJDK Runtime Environment (Red_Hat-11.0.19.0.7-1.el7_9) (build 11.0.19+7-LTS)</span><br><span class="line">OpenJDK 64-Bit Server VM (Red_Hat-11.0.19.0.7-1.el7_9) (build 11.0.19+7-LTS, mixed mode, sharing)</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-安装gitlab"><a href="#2-安装gitlab" class="headerlink" title="2. 安装gitlab"></a>2. 安装gitlab</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">rpm -ivh gitlab-ce-13.2.0-ce.0.el7.x86_64.rpm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改访问的gitlab_web地址,将地址改为自己服务器的IP</span></span><br><span class="line">vim /etc/gitlab/gitlab.rb</span><br><span class="line">external_url <span class="string">&#x27;http://192.168.0.128&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新配置并且启动gilab</span></span><br><span class="line">gitlab-ctl reconfigure</span><br><span class="line"><span class="comment"># 时间比较久，可以抽根烟</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看gitlab状态</span></span><br><span class="line">gitlab-ctl status</span><br><span class="line"><span class="comment"># 全部是run代表成功</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在浏览器中访问此服务器</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-安装Jenkins"><a href="#3-安装Jenkins" class="headerlink" title="3.安装Jenkins"></a>3.安装Jenkins</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用Java -jar 启动在本地的8081端口</span></span><br><span class="line">java -jar jenkins.war --httpPort=8081</span><br><span class="line"></span><br><span class="line"><span class="comment"># 会有一个默认密码，复制出来</span></span><br><span class="line">*************************************************************</span><br><span class="line">*************************************************************</span><br><span class="line">*************************************************************</span><br><span class="line"></span><br><span class="line">Jenkins initial setup is required. An admin user has been created and a password generated.</span><br><span class="line">Please use the following password to proceed to installation:</span><br><span class="line"></span><br><span class="line">24d21eb009324c029f7fd2ede2019128</span><br><span class="line"></span><br><span class="line">This may also be found at: /root/.jenkins/secrets/initialAdminPassword</span><br><span class="line"></span><br><span class="line">*************************************************************</span><br><span class="line">*************************************************************</span><br><span class="line">*************************************************************</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在浏览器中访问 ip:8080</span></span><br><span class="line"><span class="comment"># 输入复制的密码</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击安装推荐的插件，过程漫长，可以抽烟。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/27/gitlab_jenkins/" data-id="cliaf6u2y0000fcuncons0p97" data-title="gitlab_jenkins" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Markdown" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/20/Markdown/" class="article-date">
-  <time class="dt-published" datetime="2023-05-19T16:00:00.000Z" itemprop="datePublished">2023-05-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/20/Markdown/">use markdown</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用：# +空格代表标题，一级标题用一个#，二级用##，以此类推</p>
-<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p>斜体：使用一组* 包含需要斜体的内容</p>
-<p>举例：<em>这是斜体内容</em></p>
-<p>粗体：使用两组** 包含需要粗体的内容</p>
-<p>举例：<strong>这是粗体内容</strong></p>
-<p>粗斜体：使用三组*** 包含需要粗斜体的内容</p>
-<p>举例：<em><strong>这是粗斜体内容</strong></em></p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>使用：在一行的开头使用三个***+回车建立分割线</p>
-<p>举例：</p>
-<hr>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>使用：在文字的两端加上两个~~（波浪线）</p>
-<p>举例：<del>这是要添加删除线的内容</del></p>
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>使用：HTML的<U></u>来实现</p>
-<p>举例：<u>只是带下划线的内容</u></p>
-<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>使用：在文字的后面使用<a href="%E8%BF%99%E6%98%AF%E8%84%9A%E6%B3%A8%E7%9A%84%E5%86%85%E5%AE%B9">^</a>添加需要的脚注，类似于解释</p>
-<p>举例：这是需要添加脚注的文本<a href="%E8%BF%99%E6%98%AF%E8%84%9A%E6%B3%A8%E7%9A%84%E5%86%85%E5%AE%B9">^脚注</a>。</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>无序列表：使用”+、-、*”的其中一个+空格（需要回车）</p>
-<p>举例：</p>
-<ul>
-<li>第一项</li>
-</ul>
-<p>有序列表：使用数字+.（需要回车）</p>
-<p>举例：</p>
-<p>1.第一项</p>
-<p>列表嵌套：使用有序列表和无序列表进行组合（需要回车），组合的时候需要添加tab或者四个空格</p>
-<p>举例：</p>
-<p>1.第一项</p>
-<ul>
-<li>第一项里面的小项</li>
-</ul>
-<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><p>使用：在开头使用&gt;，表示使用这个区域，使用完需要回车，反过来可以列表嵌套区块</p>
-<p>举例：</p>
-<blockquote>
-<p>这是一个区块</p>
-<p> 1.这是区块的有序列表</p>
-<pre><code>    - 这是区块里面有序列表嵌套的无序列表
-</code></pre>
-</blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>使用：英文输入法下的一组反引号&#96;,就是代码块</p>
-<p>举例：<code>print(&quot;hello world!&quot;)</code></p>
-<h2 id="包裹代码"><a href="#包裹代码" class="headerlink" title="包裹代码"></a>包裹代码</h2><p>使用：在开头使用三个&#96;&#96;&#96;，就会提示你要插入的代码</p>
-<p>举例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">hostname = socket.gethostname()</span><br><span class="line">ip = socket.gethostbyname(hostname)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hostname=&quot;</span>,hostname)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;ip=&quot;</span>,ip)</span><br></pre></td></tr></table></figure>
-
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>使用：使用中括号包含需要的链接名称[链接名称]，然后在后面用小括号输入链接地址(链接地址)</p>
-<p>举例：这是MySQL的下载地址：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/mysql/downloads/MySQL-5.7/mysql-5.7.36-winx64.msi">MySQL5.7</a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>使用：直接复制粘贴就行</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>使用：制作表格用|来分隔不同的单元格，使用-来分隔表头和其他行</p>
-<p>举例：</p>
-<table>
-<thead>
-<tr>
-<th align="center">列1</th>
-<th align="center">列2</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"></td>
-<td align="center"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center"></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="高级技巧"><a href="#高级技巧" class="headerlink" title="高级技巧"></a>高级技巧</h2><p>用不到，不写了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/20/Markdown/" data-id="cliag07l200003kunc9u3alfn" data-title="use markdown" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Hexo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/06/Hexo/" class="article-date">
-  <time class="dt-published" datetime="2023-05-05T16:00:00.000Z" itemprop="datePublished">2023-05-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/06/Hexo/">Hexo create blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载nodejs</span></span><br><span class="line">wget https://mirrors.ustc.edu.cn/node/v16.8.0/node-v16.8.0-linux-x64.tar.gz</span><br><span class="line"><span class="comment"># 解压并且重命名</span></span><br><span class="line">tar zxvf node-v16.8.0-linux-x64.tar.gz</span><br><span class="line"><span class="built_in">mv</span> node-v16.8.0-linux-x64 node16</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改环境变量</span></span><br><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 插入以下内容</span></span><br><span class="line"><span class="built_in">export</span> PATH=/root/node16/bin:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生效环境变量</span></span><br><span class="line">souce /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置npm为淘宝源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装git</span></span><br><span class="line">yum install git -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置全局git配置</span></span><br><span class="line">git config --global user.email <span class="string">&quot;your_email@example.com&quot;</span>  	<span class="comment"># 邮件地址自己修改</span></span><br><span class="line">git config --global user.name <span class="string">&quot;your example name&quot;</span>			<span class="comment"># 名字自己改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成试试秘钥</span></span><br><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">&quot;your_email@example.com&quot;</span>   	<span class="comment"># 邮件地址自己修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看秘钥并且复制</span></span><br><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>GitHub使用步骤：</p>
-<ul>
-<li>注册Git Hub账号</li>
-<li>在主页上新建你的仓库：以 <code>github.io</code>结尾</li>
-<li>点击头像——&gt; settings ——-&gt; SSH and GPG kyes ——&gt; New Ssh key —-&gt; 粘贴你复制的秘钥</li>
-<li>点击repository：把最上面的<code>main</code>修改为<code>master</code></li>
-<li>复制你的仓库地址建议使用<code>ssh</code>，因为你上面添加了公钥</li>
-</ul>
-</blockquote>
-<h2 id="二、安装Hexo"><a href="#二、安装Hexo" class="headerlink" title="二、安装Hexo"></a>二、安装Hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局安装hexo</span></span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化博客项目，并且把名字设置为blog</span></span><br><span class="line">hexo init blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入到blog</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖包</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装hexo-deployer-git包</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、-配置部署"><a href="#三、-配置部署" class="headerlink" title="三、 配置部署"></a>三、 配置部署</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改配置文件</span></span><br><span class="line">vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在最后面修改</span></span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:&lt;your-username&gt;/&lt;your-username&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、发布博客"><a href="#四、发布博客" class="headerlink" title="四、发布博客"></a>四、发布博客</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入到文章目录</span></span><br><span class="line"><span class="built_in">cd</span> <span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建文章</span></span><br><span class="line">hexo new <span class="string">&quot;filename&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在本地预览</span></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 发布到GitHub</span></span><br><span class="line">hexo d</span><br><span class="line"><span class="comment"># 自己写的笔记发送到hexo</span></span><br><span class="line"><span class="comment"># 需要在文档开头填写: --- title:name  date: YY-MM-DD HH:MM:SS  --- </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在浏览器中访问博客地址：</p>
-<p><strong><code>https://&lt;your-githubname&gt;.github.io/</code></strong>   </p>
-<p>完成！</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/06/Hexo/" data-id="cliaf1m0b00005gunhns18bep" data-title="Hexo create blog" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/05/31/usegit/">use git</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/27/gitlab_jenkins/">gitlab_jenkins</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/20/Markdown/">use markdown</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/06/Hexo/">Hexo create blog</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
+          1.前置任务12345678910111213141516171819202122232425262728293031323334# 安装所需要的依赖yum install make gcc wget net-tools  git vim  policycoreutils openssh-server openssh-clients postfix policycoreutils-python -y# 关闭防火墙systemctl stop firewalldsystemctl disable firewalld# 关闭selinuxvim /etc/selinux/config# 将e...
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
       
-      &copy; 2023 skycry<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
+      <div class="index-article-readmore ">
+        <v-btn text href="/somedaycry/2023/05/27/gitlab_jenkins/">阅读更多</v-btn>
+      </div>
+      <v-divider></v-divider>
+    </article> 
+  
+    <article class="index-article">
+      
+      <div class="index-article-header">
+        <v-row no-gutters>
+          <v-col cols="auto">
+            <div class="index-article-header-date font-weight-medium">
+              2023-05-20
+            </div>
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col cols="auto">
+            
+              <v-card flat color="secondary" tile class="index-article-header-tag  font-weight-medium">
+                
+                  <span class="index-article-header-tag-content">
+                    <v-icon>fas fa-tag</v-icon>
+                    <a rel="tag" href = /somedaycry/tags/note/ >note</a>
+                  </span>
+                
+              </v-card>
+            
+          </v-col>
+        </v-row>
+        <span>
+          
+            <a class="index-article-header-category font-weight-bold" href="/somedaycry/categories/Default/">Default></a>
+           
+        </span> 
+        <a class="index-article-header-title font-weight-medium" href="/somedaycry/2023/05/20/Markdown/">use markdown</a>
+      </div>
+      
+      <div class="index-article-content">
+        
+          标题使用：# +空格代表标题，一级标题用一个#，二级用##，以此类推
+字体斜体：使用一组* 包含需要斜体的内容
+举例：这是斜体内容
+粗体：使用两组** 包含需要粗体的内容
+举例：这是粗体内容
+粗斜体：使用三组*** 包含需要粗斜体的内容
+举例：这是粗斜体内容
+分割线使用：在一行的开头使用三个***+回车建立分割线
+举例：
 
+删除线使用：在文字的两端加上两个~~（波浪线）
+举例：这是要添加删除线的内容
+下划线使用：HTML的来实现
+举例：只是带下划线的内容
+脚注使用：在文字的后面使用^添加需要的脚注，类似于解释
+举例：这是需要添加脚注的文本^脚注。
+列表无序列表：使用”+、-、*”的其中一...
+        
+      </div>
+      
+      <div class="index-article-readmore ">
+        <v-btn text href="/somedaycry/2023/05/20/Markdown/">阅读更多</v-btn>
+      </div>
+      <v-divider></v-divider>
+    </article> 
+  
+    <article class="index-article">
+      
+      <div class="index-article-header">
+        <v-row no-gutters>
+          <v-col cols="auto">
+            <div class="index-article-header-date font-weight-medium">
+              2023-05-06
+            </div>
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col cols="auto">
+            
+              <v-card flat color="secondary" tile class="index-article-header-tag  font-weight-medium">
+                
+                  <span class="index-article-header-tag-content">
+                    <v-icon>fas fa-tag</v-icon>
+                    <a rel="tag" href = /somedaycry/tags/note/ >note</a>
+                  </span>
+                
+              </v-card>
+            
+          </v-col>
+        </v-row>
+        <span>
+          
+            <a class="index-article-header-category font-weight-bold" href="/somedaycry/categories/Default/">Default></a>
+           
+        </span> 
+        <a class="index-article-header-title font-weight-medium" href="/somedaycry/2023/05/06/Hexo/">Hexo create blog</a>
+      </div>
+      
+      <div class="index-article-content">
+        
+          一、环境准备123456789101112131415161718192021222324252627282930# 下载nodejswget https://mirrors.ustc.edu.cn/node/v16.8.0/node-v16.8.0-linux-x64.tar.gz# 解压并且重命名tar zxvf node-v16.8.0-linux-x64.tar.gzmv node-v16.8.0-linux-x64 node16# 修改环境变量vim /etc/profile# 插入以下内容export PATH=/root/node16/bin:$PATH# 生效环境变量so...
+        
+      </div>
+      
+      <div class="index-article-readmore ">
+        <v-btn text href="/somedaycry/2023/05/06/Hexo/">阅读更多</v-btn>
+      </div>
+      <v-divider></v-divider>
+    </article> 
+   
+</v-card>  
+
+         
+                            <div id="mobile-footer" class="d-block d-md-none">
+                                <v-divider></v-divider>
+                                <div id="mobile-footer-content">
+                                    <span>Theme: <a href="https://github.com/kb1000fx/hexo-theme-insulin">Insulin</a> &nbsp; Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></span><br>
+                                    <span> &copy; 2015 - 2023 skycry</span>
+                                </div>
+                            </div>                   
+                        </v-col>                                            
+                    </v-row>
+                </v-container>
+            </v-content>
+        </v-app>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.2.30"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-base64@3.5.2/base64.min.js"></script>
 
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
+<script src="/somedaycry/js/main.js"></script>
 
 
 
 
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-  </div>
+
+
+
+
+
+
+
 </body>
 </html>
